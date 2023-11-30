@@ -161,8 +161,6 @@ nav ul li a {
 }--*/
 
 .swiper-slide {
-    text-align: left;
-    font-size: 18px;
     background: #4C3D3D;
     border-radius: 10px;
     width: 15.5rem;
@@ -177,15 +175,15 @@ nav ul li a {
 }
 .swiper-text{
     display: flex;
-    align-items: center;
+    align-items: left;    
     margin: 0;
     padding: 20px 15px;
-    display: block;
-    object-fit: cover;
+    flex-direction: column;
+    height: 60%;
     
 }
 .swiper-slide h4{
-    padding: 0px 0 10px;
+    padding: 0px 0 13px;
     margin: 0;
     color: #fff;
     font-size: 19px;
@@ -194,7 +192,8 @@ nav ul li a {
     padding: 0px 0 20px;
     margin: 0;
     color: #fff;
-    font-size: 15px;
+    font-size: 90%;
+    font-weight: 400;
 }
 .swiper-slide a{
     text-decoration: none;
@@ -220,13 +219,14 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     height: auto;
     padding: 9% 4.5%;
     background-color: #5E5050;
     
 }
 .con-background img{
-    width: 30%;
+    width: 32%;
     object-fit: contain;
     margin-left: 0;
     margin-right: auto;
@@ -245,29 +245,44 @@ nav ul li a {
     margin-right: 10px;
 }
 #cards-2{
-    width: 38.5rem;               
+    width: 40em;               
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     flex-wrap: wrap;
+    flex-direction: column;
+    height: 16.39rem;
 }
-.container-2{
+.container-2 {
     text-decoration: none;
-    margin-top: 8px;
-    text-align: center;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 4px 10px;
-    width: 8rem;
+    width: 7.7rem;
+    height: 7.7rem;
     background-color: #FFD95A;
     border-radius: 8px;
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
 }
-.container-2 h4{
-    font-size: 30px;
+
+.container-2 h4 {
+font-size: 30px;
+margin: 0; /* Remove default margin on the h4 element */
 }
-.container-2 p{
-    color: #191609;                
-    font-weight: 600;
-    font-size: 15px;
+
+.container-2 h4 i {
+font-size: 50px;
+color: #fff;
+font-size: 24px; /* Adjust the icon size as needed */
+}
+
+.container-2 p {
+color: #fff;                
+font-weight: 600;
+font-size: 15px;
+margin: 14px 0 0; /* Adjust spacing between icon and text */
 }
 .container-2.cn4 h4{
     visibility: hidden;
@@ -277,21 +292,25 @@ nav ul li a {
 }
 /*--container clours--*/
 .container-2.cn1{
-    background-color: #E0BF80;
+    transform: rotate(15deg);
+    background-color: #ad7200;
 }
 .container-2.cn2{
     background-color: #C68C1A;
 }          
 .container-2.cn3{
+    transform: rotate(-10deg);
     background-color: #865900;
 } 
 .container-2.cn4{
+    transform: rotate(-25deg);
     background-color: #B7B1B1;
 } 
 .container-2.cn5{
     background-color: #734C00;
 } 
 .container-2.cn6{
+    transform: rotate(20deg);
     background-color: #D3A54D;
 } 
 .container-2.cn7{
