@@ -13,13 +13,12 @@ body{
 header {
     background-color: #FFD95A;
     /*background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(29,27,31,1));*/
-    padding: 7px 4.5%;
+    padding: 3px 4.5%;
 
 }
 
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -38,12 +37,6 @@ nav {
 .left-part {
     padding: 0;
 }
-
-.left-part a {
-    margin: 0 16px 0 0;
-    z-index: 1;
-}
-
 .nav ul {
     flex: 1;
     text-align: right;
@@ -68,11 +61,11 @@ nav ul li a {
 .underline::after {
     content: '';
     width: 0;
-    height: 3px;
+    height: 2.5px;
     background: #FF725E;
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: -4.2px;
     transition: 0.5s;
 }
 
@@ -149,23 +142,27 @@ nav ul li a {
     background-color: #03C988;
 }
 /*--swiper--*/
-.cards{
+.cards {
     padding: 5% 0;
     display: flex;
-    justify-content: space-between;             
+    justify-content: space-between;
     width: 114vh;
     height: 23.5rem;
 }
+
 /*--.swiper{                
-    height: 48vh;
-}--*/
+             height: 48vh;
+           }--*/
 
 .swiper-slide {
+    text-align: left;
+    font-size: 18px;
     background: #4C3D3D;
     border-radius: 10px;
     width: 15.5rem;
     height: auto;
-}        
+}
+
 .swiper-slide img {
     border-radius: 10px 10px 0 0;
     display: block;
@@ -173,34 +170,38 @@ nav ul li a {
     height: 40%;
     object-fit: cover;
 }
-.swiper-text{
+
+.swiper-text {
     display: flex;
-    align-items: left;    
+    align-items: center;
     margin: 0;
     padding: 20px 15px;
-    flex-direction: column;
-    height: 60%;
-    
+    display: block;
+    object-fit: cover;
+
 }
-.swiper-slide h4{
-    padding: 0px 0 13px;
+
+.swiper-slide h4 {
+    padding: 0px 0 10px;
     margin: 0;
     color: #fff;
     font-size: 19px;
 }
-.swiper-slide p{
+
+.swiper-slide p {
     padding: 0px 0 20px;
     margin: 0;
     color: #fff;
-    font-size: 90%;
-    font-weight: 400;
+    font-size: 15px;
 }
-.swiper-slide a{
+
+.swiper-slide a {
     text-decoration: none;
     color: #fff;
     font-size: 15px;
 }
-.btnn.btn-primary{
+
+.btnn.btn-primary {
     text-decoration: none;
     color: #fff;
     border: 1px solid #fff;
@@ -208,11 +209,13 @@ nav ul li a {
     border-radius: 25px;
     width: fit-content;
     text-align: center;
-    
+
 }
-.swiper-pagination{
+
+.swiper-pagination {
     color: #FFD95A;
 }
+
 /*--swiper--*/
 .con-background{
     margin: 20vh 0 0;
