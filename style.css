@@ -7,17 +7,14 @@ html{
 body{
     margin: 0;
     padding: 0;         
-    background: #FFF7D4;                
+    background: #FFF7D4;
+    box-sizing: border-box;                
 }
 /*--Header--*/
-header {
+nav{
+    padding: 0 4.5%;
     background-color: #FFD95A;
-    /*background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(29,27,31,1));*/
-    padding: 3px 4.5%;
-
-}
-
-nav {
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }
@@ -27,38 +24,75 @@ nav {
 }
 
 .right-part li {
-    display: inline-block;
+    display: inline-flex;
 }
-
-.logo {
-    width: 145px;
+.sub-menu-1{
+    display: none;
 }
-
-.left-part {
+.sub-menu-1 ul{
     padding: 0;
 }
-.nav ul {
-    flex: 1;
-    text-align: right;
+.left-part li:hover .sub-menu-1{
+    z-index: 2;
+    position: absolute;
+    display: block;
+    background: #b3983f;
+    margin-top: 7px;
+    border-radius: 6px;
+}
+.left-part li:hover .sub-menu-1 ul{
+    text-align: left;
+    display: block;
+    margin: 10px;
+}
+.left-part li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #000000;
+    display: block;
+    border-radius: 0;    
+}
+.left-part li:hover .sub-menu-1 ul li a{
+    font-weight: 400;
+    text-align: left;
+}
+.left-part li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.left-part{
+    padding: 0;
+    display: inline-flex;
+}
+
+.right-part {
+    padding: 0;
+    list-style: none;
+}
+
+.right-part li {
+    display: inline-flex;
 }
 
 nav ul li {
-    display: inline-block;
     list-style: none;
-    margin: 0 10px 0 0;
+    margin-right: 10px;
 }
 
 nav ul li a {
     color: #191609;
     text-decoration: none;
-    text-shadow: 1px 1px 4px var(#FF725E), 2px 2px 50px var(#558EFE);
     font-size: 16px;
     font-weight: 500;
     font-style: 'Open Sans';
-    position: relative;
 }
 
-.underline::after {
+nav a.underline {
+    position: relative;
+    text-decoration: none;
+    color: #191609;
+}
+
+nav a.underline::after {
     content: '';
     width: 0;
     height: 2.5px;
@@ -69,7 +103,7 @@ nav ul li a {
     transition: 0.5s;
 }
 
-.underline:hover::after {
+nav a.underline:hover::after {
     width: 100%;
 }
 
@@ -372,43 +406,70 @@ margin: 14px 0 0; /* Adjust spacing between icon and text */
     content: '';
     z-index: -1;
 }
-  /*-blobs-*/
-#copyright{
+/*-blobs-*/
+  footer{
+    display: flex;
+    display: space-between;
+    align-items: center;
+    padding: 80px 170px;
     position: relative;
     bottom: 0;
-    padding: 85px 0;              
-    background: #4C411B        
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
 }
-#copyright p{
-    color: #fff0bd;
-    font-family: 'Rubik', sans-serif;
-    font-size: 12.3px;
-    font-style: light;
-    font-weight: 600;
-    line-height: normal;
-    text-align: center;
-}
-.icons2{
-    justify-content: center;
-    display: flex;
-}
-.icons2 a{
-    padding: 0 5px;
+/* ... (Start of copyright) ... */
+footer a{
     text-decoration: none;
-    font-size: 26.5px;
-    margin-top: 1.5px;
     color: #fff;
-    display: inline-block;
-    transition: transform 0.5s;
+    font-size: 24px;
+    font-weight: 500;
 }
-.icons2 a i{
-    color: #b3983f;
-    cursor: pointer;
-}
-.icons2 a i:hover{
+footer p{
+    font-size: 15px;
     color: #fff;
-    opacity: 1;
+    font-weight: 400;
 }
+.footer-list{
+    margin-top: 70px;
+    display: inline-flex;
+}
+.list-one{
+    margin-right: 70px;
+}
+.list-one h3{
+    margin: 0;
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.list-one ul{
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+    margin-top: 20px;
+}
+.list-one ul li{
+    margin-right: 15px;
+}
+.list-one ul li a i{
+    font-size: 22px;
+}
+.list-one.down ul{
+    display: block;
+}
+.list-one.down ul li{
+    margin: 15px 15px 15px 0;
+    color: #fff;
+}
+.footer-image {
+    margin-left: auto; /* Align the image to the right */
+}
+
+.footer-image img {
+    max-width: 100%; /* Make sure the image doesn't exceed its container width */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
+/* ... (End of copyright) ... */
 @keyframes float {
 	0% {
 		box-shadow: 0 6px 5px 0px #2a2a2a;
